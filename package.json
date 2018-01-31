@@ -11,8 +11,10 @@
   },
   "author": "Howard",
   "license": "ISC",
+  "repository": "github:rodkwithnasa/ndtest",
   "dependencies": {
-    "moment": "^2.20.1"
+    "moment": "^2.20.1",
+    "statuses": "^1.4.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
