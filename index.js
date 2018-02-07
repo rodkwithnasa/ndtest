@@ -10,5 +10,5 @@ var name="Howard", time = "today";
 var code=status('forbidden');
 var msg=status[404];
 console.log(`Hello ${name}, how are you doing: ${time}?!!!`);
-console.log(`Errorcode is ${code}, errormsg is ${msg}.!?` );
+console.log(`Errorcode is ${code}, errormsg is ${msg}.!?!` );
 
