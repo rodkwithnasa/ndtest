@@ -4,7 +4,7 @@ module.exports = {
   output: {
     filename: 'bundle.js'
   },
-  module: {
+/*  module: {
     rules: [
       {
         test: /\.js$/,
@@ -17,5 +17,5 @@ module.exports = {
         }
       }
     ]
-  } 
+  } */
 };
