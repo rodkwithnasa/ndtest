@@ -1,16 +1,37 @@
 // webpack.config.js
 
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const path = require('path');;
 
 
 module.exports = {
   entry: './index.js',
   output: {
-	path: __dirname + "/dist",
-    filename: 'index_bundle.js'
+    path: path.resolve(__dirname, 'dist'),
+//    clean: true,
+	filename: 'bundle.js',
   },
-  plugins: [new HtmlWebpackPlugin({
-	  template: './index.html'
-  })],
+  module: {
+    rules: [
+      {
+        test: /\.html$/,
+        type: 'asset/resource',
+        generator: {
+          // Emits the file as 'index.html' in the dist root
+          filename: '[name][ext]',
+		  emit: true,
+        },
+      },
+      {
+        test: /\.css$/,
+        type: 'asset/resource',
+		sideEffects: true,
+        generator: {
+          // Moves files to 'dist/css/style.css' (or whatever they were named)
+          filename: 'css/[name][ext]',
+		  emit: true,
+        },
+      },
+    ],
+  },
 
 };
