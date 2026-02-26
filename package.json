@@ -10,7 +10,10 @@
   },
   "author": "Howard",
   "license": "ISC",
-  "repository": "github:rodkwithnasa/ndtest",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rodkwithnasa/ndtest.git"
+  },
   "dependencies": {
     "moment": "^2.20.1",
     "statuses": "^1.4.0"
